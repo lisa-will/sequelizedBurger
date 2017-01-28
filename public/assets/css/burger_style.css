@@ -1,0 +1,89 @@
+ .animated { 
+            background-image: url("https://ih0.redbubble.net/image.120877231.9934/sticker,375x360.u2.png"); 
+            background-size: 275px 275px;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top:25%;
+            margin-bottom:0px;
+            -webkit-animation: 2s infinite;
+            animation: 2s infinite;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         @-webkit-keyframes bounce { 
+            0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+            40% {-webkit-transform: translateY(-30px);} 
+            60% {-webkit-transform: translateY(-15px);} 
+         } 
+         
+         @keyframes bounce { 
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+            40% {transform: translateY(-30px);} 
+            60% {transform: translateY(-15px);} 
+         }
+         
+         .bounce { 
+            -webkit-animation-name: bounce; 
+            animation-name: bounce; 
+         }
+
+body {
+    background: #e59d05;
+}
+
+h1, #title {
+    font-family: 'Pacifico', cursive;
+    color: #674236;
+    font-size: 55px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: #EEEE00 0 0 10px;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+/*.Burgers {
+
+}
+
+.miniBurgers {
+ 
+}*/
+
+.devouredBurger {
+    font-family:'Open Sans Condensed', sans-serif;
+    height: 30px;
+    background: #fff;
+    margin: 3px;
+    text-align: center;
+    padding: 3px;
+    color: #d3d3d3;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.newBurger {
+    font-family:'Open Sans Condensed', sans-serif;
+    height: 30px;
+    background: #fff;
+    margin: 3px;
+    text-align: center;
+    padding: 3px;
+    width: 40%;
+    margin-left: 30%;
+}
+
+#devour {
+    display: inline-block;
+     
+}
+
+#burger_name, #AddBtn, #name, .create-update-form, .form {
+    font-family:'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
