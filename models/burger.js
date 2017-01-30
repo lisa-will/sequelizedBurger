@@ -1,30 +1,21 @@
-var orm = require("../config/orm.js");
-
-var burger = {
-    selectAll: function(cb)
+module.exports = function(sequelize, DataTypes)
 {
-    orm.selectAll("burgers", function (res) {
-        var data = res;
-        console.log(data);
-        cb(res);
+    return sequelize.define("burgers",{
+        burger_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        devoured: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+        },
+        date: {
+            type: DataTypes.DATE,
+            defaultValue: DataTypes.NOW
+        }
+    }, {
+        timestamps: false,
+        freezeTableName: true,
+        tableName: "burgers",
     });
-},
-
-    insertOne: function(burger_name, cb) {
-        orm.insertOne(burger_name, function(res){
-            cb(res);
-            console.log(res);
-        });
-    },
-
-    updateOne: function(id, cb){
-        orm.updateOne(id, function(res){
-            cb(res);
-
-        });
-    }
-
-};
-
-// Export the orm object for the model (burger.js)
-module.exports = burger;
+}; 
